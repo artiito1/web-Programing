@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HesapMakinesi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Hesap Makinesi</a>
+            </li>
+            <li>
+                <a href="Ohesaplama.html">Ortalama Hesaplama</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="Container">
+        <div class="Form">
+            <form action="">
+                <div class="left-box">
+                    <h1>Result</h1>
+                    <div class="O-H">
+                        <h2>Ortalama : <span class="ort"> </span></h2>
+                        <h2>Harf : <span class="harf"></span></h2>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="right-box">
+                        <input type="number" id="Vize" placeholder="Vize Puanı">
+                        <input type="number" id="VizeOrani" placeholder="Vize Oranı">
+                        <input type="number" id="Final" placeholder="Final Puanı">
+                        <input type="number" id="FinalOrani" placeholder="Final Oranı">
+                        <input type="number" id="GecmeO" placeholder="Geçme Oranı">
+                        <button type="button" onclick="show_result()">Show result</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="node.js"></script>
+
+</body>
+
+</html>

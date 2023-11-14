@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortalama Hesaplama</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Hesap Makinesi</a>
+            </li>
+            <li>
+                <a href="Ohesaplama.html">Ortalama Hesaplama</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="frame">
+        <div class="conent">
+            <h1>Ortalama Hesaplama</h1>
+            <div class="form">
+                <form action="#">
+                    <div >
+                        <label for="vize">Vize Notu :</label>
+                        <input type="number" id="vize">
+                        <br>
+                        <label for="final">Final Notu :</label>
+                        <input type="number" id="final">
+                        <br>
+                        <label for="odev">Ödev Notu :</label>
+                        <input type="number" id="odev">
+                    </div>
+
+                    <h4 class="ortalama">Ortalama Puanı: --</h4>
+                    <h4 class="harf">Harf Notu: --</h4>
+
+                    <button type="submit" class="btn btn-equal">=</button>
+                    <button type="reset" class="btn btn-reset">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calculatePercentage() {
+
+            var value1 = parseFloat(document.getElementById("value1").value);
+            var value2 = parseFloat(document.getElementById("value2").value);
+
+            var percentage1 = (value1 * 40) / 100;
+            var percentage2 = (value2 * 60) / 100;
+            var totalPercentage  = percentage1 + percentage2;
+
+            var resultMessage = "Ortalama : " + totalPercentage.toFixed(2) + "%";
+
+            if (totalPercentage < 60) {
+                resultMessage += "<br> Bu Dersten Kaldınız";
+            } else {
+                resultMessage += "<br> Bu Dersten Geçtiniz";
+            }
+            document.getElementById("result").innerHTML = resultMessage;
+        }
+    </script>
+
+</body>
+
+</html>
